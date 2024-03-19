@@ -5,6 +5,13 @@ import User from "../User";
 // CSS
 import "./header.css";
 
-const Header = (props) => {};
+const Header = (props) => {
+	return (
+		<>
+			<Logo />
+			<User />
+		</>
+	);
+};
 
 export default Header;

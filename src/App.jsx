@@ -9,7 +9,12 @@ import accounts from "./assets/json/accounts.json";
 import "./App.css";
 
 function App() {
-	return <></>;
+	return (
+		<>
+			<Header />
+			<Accounts />
+		</>
+	);
 }
 
 export default App;
