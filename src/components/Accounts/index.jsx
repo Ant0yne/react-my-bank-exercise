@@ -8,9 +8,11 @@ const Accounts = (props) => {
 	return (
 		<>
 			<main>
-				{props.accounts.map((elem) => {
-					return <Account account={elem} />;
-				})}
+				<div className="container">
+					{props.accounts.map((elem, i) => {
+						return <Account account={elem} key={i} />;
+					})}
+				</div>
 			</main>
 		</>
 	);

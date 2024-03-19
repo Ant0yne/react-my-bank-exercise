@@ -5,12 +5,14 @@ import User from "../User";
 // CSS
 import "./header.css";
 
-const Header = (props) => {
+const Header = ({ logo, user, profilePic }) => {
 	return (
 		<>
 			<header>
-				<Logo />
-				<User />
+				<div className="container">
+					<Logo logo={logo} />
+					<User user={user} profilePic={profilePic} />
+				</div>
 			</header>
 		</>
 	);

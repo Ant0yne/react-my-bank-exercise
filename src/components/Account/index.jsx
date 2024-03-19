@@ -2,32 +2,31 @@ import Button from "../Button";
 
 import "./account.css";
 
-const Account = (props) => {
-	const name = props.account.name;
-	const balance = props.account.balance;
-	const color = props.account.color;
-	const operations = props.account.operations;
+const Account = ({ account }) => {
+	const { name, balance, color, operations } = account;
 
 	return (
 		<>
-			<div className={color === "#1976D2" ? "blue" : "pink"}>
-				<h2>{name}</h2>
-				<h3>{balance}</h3>
+			<div>
+				<div className={`account ${color === "#1976D2" ? "blue" : "pink"}`}>
+					<h2>{name}</h2>
+					<h3>{balance}</h3>
+				</div>
+				<div className="operation">
+					{operations.map((elem, i) => {
+						return (
+							<>
+								<span key={i}>{elem.date}</span>
+								<p>{elem.description}</p>
+								<p>{elem.amount}</p>
+							</>
+						);
+					})}
+				</div>
+				<nav>
+					<Button />
+				</nav>
 			</div>
-			<div className="operation">
-				{operations.map((elem) => {
-					return (
-						<>
-							<span>{elem.date}</span>
-							<p>{elem.description}</p>
-							<p>{elem.amount}</p>
-						</>
-					);
-				})}
-			</div>
-			<nav>
-				<Button />
-			</nav>
 		</>
 	);
 };

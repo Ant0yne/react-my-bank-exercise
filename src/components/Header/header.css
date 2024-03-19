@@ -1,0 +1,8 @@
+header {
+	background: var(--blue-grey);
+}
+
+header > div {
+	display: flex;
+	justify-content: space-between;
+}
