@@ -1,6 +1,5 @@
 // Component
 import Account from "../Account";
-import Button from "../Button";
 
 // CSS
 import "./accounts.css";
@@ -8,8 +7,11 @@ import "./accounts.css";
 const Accounts = (props) => {
 	return (
 		<>
-			<Account />
-			<Button />
+			<main>
+				{props.accounts.map((elem) => {
+					return <Account account={elem} />;
+				})}
+			</main>
 		</>
 	);
 };

@@ -12,7 +12,7 @@ function App() {
 	return (
 		<>
 			<Header />
-			<Accounts />
+			<Accounts accounts={accounts} />
 		</>
 	);
 }

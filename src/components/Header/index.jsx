@@ -8,8 +8,10 @@ import "./header.css";
 const Header = (props) => {
 	return (
 		<>
-			<Logo />
-			<User />
+			<header>
+				<Logo />
+				<User />
+			</header>
 		</>
 	);
 };
