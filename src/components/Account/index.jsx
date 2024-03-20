@@ -4,25 +4,26 @@ import "./account.css";
 
 const Account = ({ account }) => {
 	const { name, balance, color, operations } = account;
-
+	const descriptionLimit = 4;
 	return (
 		<>
-			<div>
-				<div className={`account ${color === "#1976D2" ? "blue" : "pink"}`}>
+			<div className="account">
+				<div
+					className={`account-title ${color === "#1976D2" ? "blue" : "pink"}`}>
 					<h2>{name}</h2>
-					<h3>{balance}</h3>
+					<h3>{balance} €</h3>
 				</div>
-				<div className="operation">
-					{operations.map((elem, i) => {
-						return (
-							<>
-								<span key={i}>{elem.date}</span>
+				{operations.map((elem, i) => {
+					return (
+						<div key={i} className="operation">
+							<span>{elem.date}</span>
+							<div>
 								<p>{elem.description}</p>
-								<p>{elem.amount}</p>
-							</>
-						);
-					})}
-				</div>
+								<p>{elem.amount} €</p>
+							</div>
+						</div>
+					);
+				})}
 				<nav>
 					<Button />
 				</nav>

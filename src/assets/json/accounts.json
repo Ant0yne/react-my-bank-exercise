@@ -21,6 +21,11 @@
 			},
 			{
 				"date": "16/07/2019",
+				"description": "LOYER",
+				"amount": -500
+			},
+			{
+				"date": "15/07/2019",
 				"description": "SALAIRE",
 				"amount": 2183
 			}

@@ -1,5 +1,7 @@
 header {
 	background: var(--blue-grey);
+	padding: 10px 0;
+	margin-bottom: 10px;
 }
 
 header > div {

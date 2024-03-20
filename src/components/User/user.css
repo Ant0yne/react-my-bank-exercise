@@ -1,8 +1,14 @@
 #user {
 	display: flex;
 	align-items: center;
+	gap: 10px;
+}
+
+#user > p {
+	color: var(--white);
 }
 
 #user > img {
 	height: 50px;
+	border-radius: 50%;
 }
